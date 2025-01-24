@@ -22,6 +22,23 @@ button {
   font-weight: 500;
   border-radius: 15px;
   padding-bottom: 10px;
+  cursor: pointer;
+  
+}
+button:hover{
+  background-color: #1a2530;
+  border:#000000 1px solid;
+}
+
+.secondary-btn {
+  background: transparent;
+  color: var(--gray);
+  border: 1px solid rgb(161, 159, 159);
+}
+.secondary-btn:hover {
+  background: transparent;
+  border-color: #000000;
+  border-width: 1px;
 }
 .container {
   margin: 0 auto;
@@ -40,6 +57,10 @@ nav {
   display: flex;
   list-style: none;
   gap: 24px;
+}
+.nav-links li:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .hamburger {
@@ -86,11 +107,6 @@ nav {
 }
 .hero-btn button {
   font-size: 24px;
-}
-.secondary-btn {
-  background: transparent;
-  color: var(--gray);
-  border: 1px solid gray;
 }
 
 .shopping p {

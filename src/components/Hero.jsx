@@ -14,7 +14,7 @@ const HeroSection = () => {
         </div>
 
         <div className="hero-btn">
-          <button>Start Reading</button>
+          <button className="primary-btn">Start Reading</button>
           <button className="secondary-btn">Explore Genre</button>
         </div>
 
