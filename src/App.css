@@ -40,6 +40,11 @@ button:hover{
   border-color: #000000;
   border-width: 1px;
 }
+.login-btn {
+  text-align: center;
+  font-size: 1.5em;
+  padding-top: 8px;
+}
 .container {
   margin: 0 auto;
   max-width: 1280px;
@@ -62,7 +67,30 @@ nav {
   text-decoration: underline;
   cursor: pointer;
 }
+.slider-block {
+  position: absolute;
+  Right: 10%;
+  top: 18em; 
+  transform: translateY(-50%);
+  max-height: 70vh;
+  width: 30vh;
+}
 
+.hero-image {
+  position: absolute;
+  top: 40%;
+  right: 15%;
+  height: 70vh;
+  width: 40vh;
+}
+.hero-image img {
+  height: 100%;
+  width: 100% ;
+  transform: translateY(-50%);
+  max-height: 80vh;
+  width: auto;
+
+}
 .hamburger {
   display: none;
   flex-direction: column;
@@ -83,17 +111,42 @@ nav {
   align-items: center;
   height: calc(100vh - 72px);
   position: relative;
+  flex-direction: column;
 }
 .hero-content {
   display: flex;
+  position: relative;
   flex-direction: column;
+  height: 100vh;
+  min-height: 100vh;
   gap: 36px;
-  width: 50%;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.other-content {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding: 6em 3em;
+    min-height: 80vh;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 -50px 50px -50px rgba(0, 0, 0, 0.1);
+}
+.other-content h1 {
+    font-size: 4em;
+    font-weight: 800;
+    background: linear-gradient(45deg, var(--red), #34495E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5em;
+    letter-spacing: -1px;
 }
 .hero h1 {
   font-weight: 800;
+  width: 60%;
   font-size: min(108px, 10vw);
-  line-height: 1.2;
+  line-height: 1.2;   
 }
 .hero p {
   font-weight: 600;
@@ -117,17 +170,79 @@ nav {
   display: flex;
   gap: 16px;
 }
-.hero-image {
-  height: 20%;
+.brand-icons img {
+  height: 2rem;
+  width: auto
 }
-.hero-image img {
-  position: absolute;
-  top: 50%;
-  right: 5%;
-  transform: translateY(-50%);
-  max-height: 80vh;
-  width: auto;
+.more-data {
+    max-width: 800px;
+    margin: 0 auto;
 }
+
+.more-data h2 {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--gray);
+    margin: 1.5em 0 1em;
+    position: relative;
+    padding-bottom: 0.5em;
+}
+
+.more-data h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--red);
+    border-radius: 2px;
+}
+
+.more-data ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 2em 0;
+}
+
+.more-data ul li {
+    font-size: 1.1em;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 1.2em;
+    padding-left: 2em;
+    position: relative;
+    color: #444;
+    transition: transform 0.2s ease;
+}
+
+.more-data ul li:hover {
+    transform: translateX(10px);
+}
+
+.more-data ul li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--red);
+    font-weight: bold;
+}
+
+.more-data p {
+    font-size: 1.2em;
+    color: #666;
+    margin: 1.5em 0;
+    font-weight: 500;
+}
+
+.slider-block {
+    margin: 4em auto;
+    padding: 2em;
+    background: linear-gradient(to right, #f4efea, #fff);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
 @media screen and (max-width: 1700px) {
   .hero {
     padding: 3em;
@@ -146,7 +261,7 @@ nav {
 }
 @media screen and (max-width: 1200px) {
   .hero-content {
-    width: 60%;
+    width: 100%;
   }
   .hero {
     padding: 2em 5em;
@@ -161,7 +276,7 @@ nav {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 968px) {
   .hero {
     flex-direction: column;
     text-align: center;
@@ -169,18 +284,44 @@ nav {
     height: auto;
   }
 
+  .hero-content h1{
+    width: 100% ;
+  }
+  .other-content h1 {
+    margin: auto;
+  }
+  .other-content ul {
+    margin: auto;
+  }
   .hero-content {
     width: 100%;
     align-items: center;
+    height: auto;
+    padding-bottom: 6em;
   }
-
+  .hero-image{
+    position: relative  ;
+    top: 0%;
+    right: inherit;
+    height: 50vh;
+    margin: auto;
+    width: 30vh;
+  }
   .hero-image img {
+    height: 100%;
+    width: 100% ;
+    object-fit: cover;
     position: static;
     transform: none;
     max-width: 100%;
     margin-top: 40px;
   }
-
+  .slider-block {
+    position: static;
+    transform: none;
+    max-width: 100%;
+    margin-top: 2em;
+  }
   nav {
     padding: 0 20px;
   }
@@ -222,6 +363,52 @@ nav {
     font-size: 18px;
     padding: 6px 20px;
   }
+
+  .other-content {
+    padding: 4em 2em;
+    text-align: center;
+  }
+
+  .other-content h1 {
+    font-size: 3em;
+  }
+
+  .other-content h1,
+  .other-content h2,
+  .other-content p,
+  .other-content ul {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .more-data h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .more-data ul li {
+    text-align: center;
+    padding-left: 0;
+    padding: 1em;
+    background: rgba(244, 239, 234, 0.5);
+    border-radius: 10px;
+    margin-bottom: 1em;
+  }
+
+  .more-data ul li:hover {
+    transform: translateY(-5px);
+    background: rgba(244, 239, 234, 0.8);
+  }
+
+  .more-data ul li::before {
+    display: none;
+  }
+
+  .slider-block {
+    margin: 2em auto;
+    padding: 1em;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -237,4 +424,60 @@ nav {
     flex-direction: column;
     gap: 20px;
   }
+
+  .other-content {
+    padding: 3em 1.5em;
+  }
+
+  .other-content h1 {
+    font-size: 2.5em;
+  }
+
+  .more-data h2 {
+    font-size: 1.5em;
+  }
+
+  .more-data ul li {
+    font-size: 1em;
+  }
 }
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--gray);
+  animation: bounce 2s infinite;
+  cursor: pointer;
+}
+
+.scroll-indicator span {
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.scroll-indicator i {
+  font-size: 24px;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  40% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+  60% {
+    transform: translateY(-5px) translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .scroll-indicator {
+    display: none;
+}}

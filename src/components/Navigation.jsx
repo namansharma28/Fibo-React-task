@@ -29,7 +29,7 @@ const Navigation = () => {
         <li href="#">Contact</li>
       </ul>
 
-      <button className="login-btn">login</button>
+      <button className="login-btn">LogIn</button>
     </nav>
   );
 };

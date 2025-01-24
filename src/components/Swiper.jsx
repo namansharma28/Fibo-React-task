@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-cards';
+import './swiper.css'
 
 
 // import required modules
@@ -19,15 +20,14 @@ export default function Slider() {
         modules={[EffectCards]}
         className="mySwiper"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        <SwiperSlide><img src='/images/Atomic+Habits.png' /></SwiperSlide>
+        <SwiperSlide><img src='public\images\QS0XJ8WFGLYT4F61665222486.png' /></SwiperSlide>
+        <SwiperSlide><img src='public\images\image-122.png' /></SwiperSlide>
+        <SwiperSlide><img src='public\images\681-6814902_think-and-grow-rich.png' /></SwiperSlide>
+        <SwiperSlide><img src='/images/Atomic+Habits.png' /></SwiperSlide>
+        <SwiperSlide><img src='public\images\QS0XJ8WFGLYT4F61665222486.png' /></SwiperSlide>
+        <SwiperSlide><img src='public\images\image-122.png' /></SwiperSlide>
+        <SwiperSlide><img src='public\images\681-6814902_think-and-grow-rich.png' /></SwiperSlide>
       </Swiper>
     </>
   );
