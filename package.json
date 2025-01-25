@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
   "deploy": "gh-pages -d build",
-  "homepage": "https://github.com/namansharma28/Fibo-React-task/"
+  "homepage": "https://namansharma28.github.io/Fibo-React-task/"
   },
   "dependencies": {
     "react": "^18.2.0",
